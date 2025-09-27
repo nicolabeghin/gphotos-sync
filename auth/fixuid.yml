@@ -1,0 +1,4 @@
+user: docker
+group: docker
+paths:
+  - /profile

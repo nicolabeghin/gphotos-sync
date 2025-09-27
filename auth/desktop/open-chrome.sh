@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-sudo -u abc rm -f /profile/Singleton*
-sudo -u abc google-chrome \
+sudo -u docker rm -f /profile/Singleton*
+sudo -u docker google-chrome \
     --user-data-dir=/profile \
     --no-first-run \
     --password-store=basic \

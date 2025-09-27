@@ -29,15 +29,9 @@ services:
   auth:
     build:
       context: auth
-      args:
-        - PUID=${PUID:-1000}
-        - PGID=${PGID:-1000}
-    restart: never
     ports:
       - "6080:80"
+    user: "${PUID:-1000}:${PGID:-1000}"
     volumes:
       - ./profile:/profile
-      - ./auth/desktop:/home/abc/Desktop
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
+      - ./auth/desktop:/root/Desktop
