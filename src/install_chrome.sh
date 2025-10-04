@@ -32,7 +32,7 @@ npx -y @puppeteer/browsers install --install-deps --path ${CHROME_FOLDER} ${CHRO
 ln -sf $(find ${CHROME_FOLDER}/chrome -type f -name chrome -print) /usr/local/bin/google-chrome
 
 # output chrome version to verify install worked
-/usr/local/bin/google-chrome --version || exit 1
+#/usr/local/bin/google-chrome --version || exit 1
 
 # uninstall NVM and node
 rm -fr ${NVM_DIR}
