@@ -16,6 +16,17 @@ jobs:
     # - name: Build the Docker image
     #   run: make build
 
+    - name: Set Current Date
+      env:
+        TZ: 'Europe/Rome'
+      run: echo "CURRENT_DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+
+    - name: Setup QEMU
+      uses: docker/setup-qemu-action@v3
+
+    - name: Setup Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
     - name: Build Latest auth
       uses: docker/build-push-action@v6
       with:
