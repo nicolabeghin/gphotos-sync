@@ -34,9 +34,6 @@ ln -sf $(find ${CHROME_FOLDER}/chrome -type f -name chrome -print) /usr/local/bi
 # output chrome version to verify install worked
 /usr/local/bin/google-chrome --version || exit 1
 
-# cleanup old chrome install
-rm -fr /opt/google
-
 # uninstall NVM and node
 rm -fr ${NVM_DIR}
 

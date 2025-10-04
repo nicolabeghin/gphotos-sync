@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Google Chrome
+Exec=/home/ubuntu/Desktop/open-chrome.sh
+Hidden=false
+NoDisplay=false
+X-MATE-Autostart-enabled=true

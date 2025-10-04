@@ -1,5 +1,7 @@
 #!/bin/bash
 
-chmod -R a+rwx /profile
-rm -f /profile/Singleton*
-/startup.sh "$@"
+# exit on error
+# set -e
+# sudo chmod -R a+rwx /profile
+# sudo rm -f /profile/Singleton* || true
+exec "$@"

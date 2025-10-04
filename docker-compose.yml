@@ -26,13 +26,14 @@ services:
       - HEALTHCHECK_ID=${HEALTHCHECK_ID:-xyz} # optional - create one from https://healthchecks.io/
 
   auth:
-    image: nicolabeghin/gphotos-sync:auth-latest
+    image: quay.io/nicolabeghin/gphotos-sync:auth-latest
     build:
       context: .
       dockerfile: auth/Dockerfile
       platforms:
         - "linux/amd64"
         - "linux/arm64"
+    privileged: true
     ports:
       - "6080:80"
     volumes:
